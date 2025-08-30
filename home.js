@@ -1,3 +1,13 @@
+
+// logout feature
+
+document.getElementById('logout-btn').addEventListener('click', function () {
+    // window.location.href = './home.html'
+    window.location.href = './index.html'
+})
+
+// add money features
+
 document.getElementById('add-money-btn').addEventListener('click', function (event) {
     event.preventDefault()
 
@@ -22,6 +32,27 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     document.getElementById('available-balance').innerText = totalBalance
 })
 
+
+// cash out feature
+document.getElementById('withdraw-btn').addEventListener('click', function (event) {
+    event.preventDefault()
+    const validPin = 12345
+
+    const withdrawAmount = parseInt(document.getElementById('withdraw-amount').value)
+    const availableBalance = parseInt(document.getElementById('available-balance').innerText)
+
+    const pin = parseInt(document.getElementById('pin').value)
+
+    if (pin !== validPin) {
+        alert('please provide valid pin')
+        return
+    }
+
+    const totalBalanced = availableBalance - withdrawAmount
+
+    document.getElementById('available-balance').innerText = totalBalanced
+})
+
 // toggling features
 
 document.getElementById('add-btn').addEventListener('click', function () {
@@ -30,6 +61,7 @@ document.getElementById('add-btn').addEventListener('click', function () {
 })
 
 document.getElementById('cash-out-btn').addEventListener('click', function () {
+
     document.getElementById('add-money-parent').style.display = 'none'
     document.getElementById('cash-out-parent').style.display = 'block'
 })
