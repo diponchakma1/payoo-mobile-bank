@@ -32,6 +32,13 @@ function getInnerText(id) {
     const elementValueNumber = parseInt(elementValue)
     return elementValueNumber
 }
+
+// set inner text value
+
+function setInnerText(value) {
+    const availableBalanceElement = document.getElementById('available-balance')
+    availableBalanceElement.innerText = value
+}
 // add money features
 
 document.getElementById('add-money-btn').addEventListener('click', function (event) {
@@ -55,7 +62,7 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     }
     const totalBalance = addAmount + availableBalance
 
-    document.getElementById('available-balance').innerText = totalBalance
+    setInnerText(totalBalance)
 })
 
 
@@ -77,7 +84,7 @@ document.getElementById('withdraw-btn').addEventListener('click', function (even
 
     const totalBalanced = availableBalance - withdrawAmount
 
-    document.getElementById('available-balance').innerText = totalBalanced
+    setInnerText(totalBalanced)
 })
 
 // toggling features
