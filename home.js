@@ -50,6 +50,10 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     const addAmount = getInputValueNumber('add-amount')
     const pinNumber = getInputValueNumber('pin-number')
 
+    if (addAmount <= 0) {
+        alert('Invalid amount')
+        return
+    }
     const availableBalance = getInnerText('available-balance')
 
     if (bankAccountNumber.length < 11) {
@@ -63,6 +67,14 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     const totalBalance = addAmount + availableBalance
 
     setInnerText(totalBalance)
+
+    const data = {
+        name: "Add Money",
+        date: new Date().toLocaleTimeString()
+    }
+    transactionData.push(data)
+    console.log(transactionData)
+
 })
 
 
@@ -74,6 +86,11 @@ document.getElementById('withdraw-btn').addEventListener('click', function (even
     const agentNumber = document.getElementById('agent-number').value
     const withdrawAmount = getInputValueNumber('withdraw-amount')
     const availableBalance = getInnerText('available-balance')
+
+    if (withdrawAmount <= 0 || withdrawAmount > availableBalance) {
+        alert('invalid amount')
+        return
+    }
 
     const pin = getInputValueNumber('pin')
 
