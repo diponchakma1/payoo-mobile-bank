@@ -43,36 +43,37 @@
 
         <!-- payoo features section start -->
         <div class="min-h-[200px] grid grid-cols-3 gap-4 mt-[20px]">
-            <div id="add-btn" class="border-1 rounded-lg border-gray-400 text-center p-5">
+            <div id="add-btn" class="form-btn border-1 rounded-lg border-gray-400 text-center p-5">
                 <img src="./assets/wallet1.png" class="mx-auto" alt="">
                 <h2 class="text-[#080808b3]">Add Money</h2>
             </div>
-            <div id="cash-out-btn" class="border-1 rounded-lg border-gray-400 text-center p-5">
+            <div id="cash-out-btn" class="form-btn border-1 rounded-lg border-gray-400 text-center p-5">
                 <img src="./assets/send1.png" class="mx-auto" alt="">
                 <h2 class="text-[#080808b3]">Cashout</h2>
             </div>
-            <div class="border-1 rounded-lg border-gray-400 text-center p-5">
+            <div id="transfer-money-btn" class="form-btn border-1 rounded-lg border-gray-400 text-center p-5">
                 <img src="./assets/money1.png" class="mx-auto" alt="">
                 <h2 class="text-[#080808b3]">Transfer Money</h2>
             </div>
-            <div class="border-1 rounded-lg border-gray-400 text-center p-5">
+            <div id="get-bonus-btn" class="form-btn border-1 rounded-lg border-gray-400 text-center p-5">
                 <img src="./assets/bonus1.png" class="mx-auto" alt="">
                 <h2 class="text-[#080808b3]">Get Bonus</h2>
             </div>
-            <div class="border-1 rounded-lg border-gray-400 text-center p-5">
+            <div id="pay-bill-btn" class="form-btn border-1 rounded-lg border-gray-400 text-center p-5">
                 <img src="./assets/purse1.png" class="mx-auto" alt="">
                 <h2 class="text-[#080808b3]">Pay Bill</h2>
             </div>
-            <div class="border-1 rounded-lg border-gray-400 text-center p-5">
+            <div id="transaction-btn" class="form-btn border-1 rounded-lg border-gray-400 text-center p-5">
                 <img src="./assets/transaction1.png" class="mx-auto" alt="">
                 <h2 class="text-[#080808b3]">Transactions</h2>
             </div>
         </div>
     </div>
 
+    <!-- features from section here -->
     <!-- add money form section -->
     <div class="all-form-section max-w-lg mx-auto mt-[20px] pb-20">
-        <div id="add-money-parent">
+        <div class="feature" id="add-money-parent">
             <h2 class="font-semibold pl-5">Add Money</h2>
             <form action="" class="bg-white mt-5 p-8 max-w-lg mx-auto rounded-3xl mb-10">
                 <div>
@@ -103,7 +104,7 @@
             </form>
         </div>
         <!-- cashout section start here -->
-        <div id="cash-out-parent" style="display: none;">
+        <div class="feature" id="cash-out-parent" style="display: none;">
             <h2 class="font-semibold pl-5">Cash Out</h2>
             <form action="" class="bg-white mt-5 p-8 max-w-lg mx-auto rounded-3xl mb-10">
                 <div>
@@ -124,9 +125,23 @@
                 <button id="withdraw-btn" class="btn btn-primary w-full mt-5 rounded-3xl">Withdraw Money</button>
             </form>
         </div>
-    </div>
-
-    <script src="./home.js"></script>
+        <!-- Transfer Money section start here -->
+        <div class="feature" id="transfer-money-parent" style="display: none;">
+            <h2 class="font-semibold pl-5">Transfer Money</h2>
+        </div>
+        <!-- Get bonus section start here -->
+        <div class="feature" id="get-bonus-parent" style="display: none;">
+            <h2 class="font-semibold pl-5">Get Bonus</h2>
+        </div>
+        <!-- Pay bill  section start here -->
+        <div class="feature" id="pay-bill-parent" style="display: none;">
+            <h2 class="font-semibold pl-5">Pay Bill</h2>
+        </div>
+        <!-- Transaction section start here -->
+        <div class="feature" id="transaction-parent" style="display: none;">
+            <h2 class="font-semibold pl-5">Transactions</h2>
+        </div>
+        <script src="./home.js"></script>
 </body>
 
 </html>
