@@ -23,6 +23,15 @@ function getInputValue(id) {
     const inputFieldValue = inputField.value
     return inputFieldValue
 }
+
+// get Inner Text value function
+
+function getInnerText(id) {
+    const element = document.getElementById(id)
+    const elementValue = element.innerText
+    const elementValueNumber = parseInt(elementValue)
+    return elementValueNumber
+}
 // add money features
 
 document.getElementById('add-money-btn').addEventListener('click', function (event) {
@@ -34,7 +43,7 @@ document.getElementById('add-money-btn').addEventListener('click', function (eve
     const addAmount = getInputValueNumber('add-amount')
     const pinNumber = getInputValueNumber('pin-number')
 
-    const availableBalance = parseInt(document.getElementById('available-balance').innerText)
+    const availableBalance = getInnerText('available-balance')
 
     if (bankAccountNumber.length < 11) {
         alert("Please provide valid account number")
@@ -57,8 +66,8 @@ document.getElementById('withdraw-btn').addEventListener('click', function (even
 
     const agentNumber = document.getElementById('agent-number').value
     const withdrawAmount = getInputValueNumber('withdraw-amount')
-    const availableBalance = parseInt(document.getElementById('available-balance').innerText
-    )
+    const availableBalance = getInnerText('available-balance')
+
     const pin = getInputValueNumber('pin')
 
     if (pin !== validPin) {
